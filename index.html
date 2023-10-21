@@ -1,0 +1,56 @@
+
+
+<html>
+    <head>
+        <title>Wordle</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale = 1.0">
+        <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.15.3/css/all.css" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+
+        <link rel="stylesheet" href="style.css">
+    </head>
+
+    <body>
+        <h1 id="title">Wordle</h1>
+        <i id = "question" class="fas fa-question"></i>
+
+        
+        <i  id = "info" class="fas fa-info-circle"></i>   
+        <i id="dark-mode-toggle" class="fas fa-circle"></i>
+
+    
+
+        <hr>
+        <br>
+        <div id="board">
+        </div>
+        <div id = "restart-container">
+
+            <button id="start-over">Start Over</button>
+
+        </div>
+        <br>
+        <div id="popup" class="hidden">
+            <div id="popup-message"></div>
+          </div>
+              
+        <div id="instructions-container">
+            <p>The goal is to guess the word in 4 tries
+                <br>
+                ) when you have filled 4 squares, press the enter button on your keyboard
+                <br>
+                ) a green square  epresents correct letter in correct spot
+                <br>
+                ) an orange square
+            
+            </p>
+          </div>
+          <div id = "answer"> </div>
+          
+        <img id="congrats" src="https://res.cloudinary.com/mkf/image/upload/v1675467141/ENSF-381/labs/congrats_fkscna.gif" alt="Congratulations">
+       
+
+            <script src="wordle.js"></script>
+
+</html>
