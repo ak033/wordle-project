@@ -18,7 +18,7 @@ var gameHeight = 4; //number of guesses
         const darkModeToggle = document.getElementById("dark-mode-toggle");
         darkModeToggle.addEventListener("click", () => {
             document.body.classList.toggle("dark");
-            console.log("darl");
+            console.log("dark mode activated ");
         });
 
         const instructionsToggle = document.getElementById("info");
@@ -81,6 +81,22 @@ var gameHeight = 4; //number of guesses
         //   });
        
 
+        try {
+            // Replace the API call with a hardcoded list of words
+            let dictionary = ["word", "good", "hell", "tomo", "como"]; // Add your words here
+            let randomWord = dictionary[Math.floor(Math.random() * dictionary.length)];
+            Word = randomWord.toUpperCase();
+            console.log(Word);
+    
+            const questionIcon = document.getElementById("question");
+            
+            questionIcon.addEventListener("click", function(){
+                alert("Hint: This is a hint for the word."); // Replace this with your hint
+                console.log("Hint: This is a hint for the word."); // Replace this with your hint
+            });
+        } catch (error) {
+            console.log('Error:', error);
+        }
 
 
 
