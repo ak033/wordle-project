@@ -1,4 +1,4 @@
-
+<!-- 
 
 <html>
     <head>
@@ -59,4 +59,67 @@
 
             <script src="wordle.js"></script>
 
+</html> -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Wordle</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="header">
+            <h1 id="title">Wordle</h1>
+            <div class="controls">
+                <button id="info" class="control-btn" title="Instructions">
+                    <i class="fas fa-info-circle"></i>
+                </button>
+                <button id="question" class="control-btn" title="Hint">
+                    <i class="fas fa-question"></i>
+                </button>
+                <button id="dark-mode-toggle" class="control-btn" title="Toggle Dark Mode">
+                    <i class="fas fa-moon"></i>
+                </button>
+            </div>
+        </div>
+
+        <div class="divider"></div>
+
+        <div class="game-info">
+            Guess the 4-letter word in 4 tries or less!
+        </div>
+
+        <div id="game-container">
+            <div id="board"></div>
+            <div id="restart-container">
+                <button id="start-over">
+                    <i class="fas fa-redo"></i> Start Over
+                </button>
+            </div>
+        </div>
+
+        <div id="instructions-container">
+            <p>
+                🎯 <strong>Goal:</strong> Guess the word in 4 tries<br>
+                ⌨️ <strong>How to play:</strong> Fill 4 squares, then press Enter<br>
+                🟢 <strong>Green:</strong> Correct letter in correct spot<br>
+                🟡 <strong>Yellow:</strong> Correct letter in wrong spot<br>
+                ⚫ <strong>Gray:</strong> Letter not in the word
+            </p>
+        </div>
+
+        <div id="answer"></div>
+        <img id="congrats" src="https://res.cloudinary.com/mkf/image/upload/v1675467141/ENSF-381/labs/congrats_fkscna.gif" alt="Congratulations">
+    </div>
+
+    <div id="popup" class="hidden">
+        <div id="popup-message"></div>
+    </div>
+
+    <script src="wordle.js"></script>
+</body>
 </html>
